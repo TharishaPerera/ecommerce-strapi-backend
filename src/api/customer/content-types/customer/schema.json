@@ -59,6 +59,12 @@
     },
     "lastLoginDate": {
       "type": "date"
+    },
+    "customerAddresses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer-address.customer-address",
+      "mappedBy": "customerId"
     }
   }
 }
