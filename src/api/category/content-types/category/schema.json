@@ -41,11 +41,11 @@
     "lastUpdatedDate": {
       "type": "date"
     },
-    "productId": {
+    "productName": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "categoryId"
+      "inversedBy": "categoryName"
     }
   }
 }

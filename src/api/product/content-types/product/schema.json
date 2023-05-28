@@ -47,22 +47,28 @@
     "lastUpdatedDate": {
       "type": "datetime"
     },
-    "craftsmanId": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::craftsman.craftsman",
-      "inversedBy": "productId"
-    },
-    "categoryId": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "productId"
-    },
-    "discountId": {
+    "discountCode": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::discount.discount"
+    },
+    "craftsmanName": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::craftsman.craftsman",
+      "inversedBy": "productName"
+    },
+    "categoryName": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "productName"
+    },
+    "carts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cart.cart",
+      "mappedBy": "products"
     }
   }
 }
